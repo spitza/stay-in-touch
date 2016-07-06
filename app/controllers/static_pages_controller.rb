@@ -1,6 +1,8 @@
 class StaticPagesController < ApplicationController
   def home
-    @meeting = current_user.meetings.build
+    if current_user
+      @meeting = current_user.meetings.build
+    end
   end
 
   def about
