@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160706214225) do
+ActiveRecord::Schema.define(version: 20160706222348) do
 
   create_table "meetings", force: :cascade do |t|
     t.text     "content"
@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20160706214225) do
     t.string   "invitee"
     t.integer  "frequency"
     t.boolean  "active"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "work_or_play"
     t.index ["user_id", "created_at"], name: "index_meetings_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_meetings_on_user_id"
   end
