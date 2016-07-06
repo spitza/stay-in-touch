@@ -3,8 +3,7 @@
   <div class="field">
     <%= f.email_field :invitee %>
     <%= f.select :frequency, [1,2,4]%>
-    <%= check_box_tag(:work?) %>
-    <%= label_tag(:work, "work hours") %>
+    <%= f.select :type, ["Work Hours", "Personal Hours"]%>
   </div>
   <%= f.submit "Create", class: "btn btn-primary" %>
 <% end %>

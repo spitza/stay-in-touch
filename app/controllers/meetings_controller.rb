@@ -14,7 +14,7 @@ class MeetingsController < ApplicationController
   private
 
     def meeting_params
-      params.require(:meeting).permit(:frequency, :invitee, :work)
+      params.require(:meeting).permit(:frequency, :invitee, :type)
     end
   
 end
