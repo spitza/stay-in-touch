@@ -3,7 +3,7 @@
   <div class="field">
     <%= f.email_field :invitee %>
     <%= f.select :frequency, [1,2,4]%>
-    <%= f.select :type, ["Work Hours", "Personal Hours"] %>
+    <%= f.select :work_or_play, ["Work Hours", "Personal Hours"] %>
   </div>
   <%= f.submit "Create", class: "btn btn-primary" %>
 <% end %>
