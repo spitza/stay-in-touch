@@ -7,7 +7,7 @@ class MeetingsController < ApplicationController
       RestClient.post "https://api:#{ENV["MAILGUN_API_KEY"]}"\
       "@api.mailgun.net/v3/mg.stayintouch.link/messages",
       :from => "Stay in Tizouch <mailgun@mg.stayintouch.link>",
-      :to => "thespitzer@gmail.com, phil@mg.stayintouch.link",
+      :to => "thespitzer@gmail.com",
       :subject => "Hello phillll",
       :text => "Testing some Mailgun awesomness yuip yupyup !"
       redirect_to root_url
