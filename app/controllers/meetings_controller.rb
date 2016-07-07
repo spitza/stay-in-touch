@@ -10,6 +10,7 @@ class MeetingsController < ApplicationController
       :to => "thespitzer@gmail.com",
       :subject => "Hello phillll",
       :text => "Testing some Mailgun awesomness yuip yupyup !"
+      puts "verifying that bloobs"
       redirect_to root_url
     else
       render 'static_pages/home'
