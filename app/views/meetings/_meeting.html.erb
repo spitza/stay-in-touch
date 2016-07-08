@@ -4,7 +4,8 @@
   <span class="frequency"><%= meeting.frequency %></span>
   <span class="work_or_play"><%= meeting.work_or_play %></span>
   <span class="confirmed"><%= meeting.confirmed %></span>
-  <span class="timestamp">
-    Created <%= time_ago_in_words(meeting.created_at) %> ago.
-  </span>
+  <span class="timestamp">Created <%= time_ago_in_words(meeting.created_at) %> ago.</span>
+  <% if meeting.invitee == current_user.email and !meeting.confirmed %>
+    <%= link_to("Accept this meeting", accept_meeting_path(meeting), method: :put, class: "btn btn-lg btn-primary") %>
+  <% end %>
 </li>

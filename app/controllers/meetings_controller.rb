@@ -20,6 +20,12 @@ class MeetingsController < ApplicationController
     @meeting = Meeting.find(params[:id])
   end
   
+  def accept
+    @meeting = Meeting.find(params[:id])
+    @meeting.update_attributes confirmed: true
+    redirect_to root_url
+  end
+  
   private
 
     def meeting_params
