@@ -13,6 +13,15 @@
       <section class="meeting_form">
         <%= render 'shared/meeting_form' %>
       </section>
+      <div class="col-md-8">
+        <% if current_user.meetings.any? %>
+          <h3>Meetings </h3>
+          <ol class="meetings">
+            <%= render @meetings %>
+          </ol>
+          <%= will_paginate @meetings %>
+        <% end %>
+      </div>
     </aside>
   </div>
   <% else %>
