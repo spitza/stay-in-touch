@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
   resources :sessions, only: [:create, :destroy]
-  resources :meetings, only: [:create, :destroy]
+  resources :meetings, only: [:create, :destroy, :show]
 end

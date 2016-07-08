@@ -1,0 +1,10 @@
+<h2><%= @meeting.user.name %> invited you to stay in touch.</h2>
+<p>You'll only be able to accept this invitation if you're <%= @meeting.invitee %></p>
+
+<% if current_user %>
+  Signed in as <strong><%= current_user.name %></strong>!
+  <%= link_to "Sign out", signout_path, id: "sign_out" %>
+<% else %>
+  <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in", class: "btn btn-lg btn-primary" %>
+  <p>We'll never send an email without your permission.</p>
+<% end %>
