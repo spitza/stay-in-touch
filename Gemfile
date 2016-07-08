@@ -18,6 +18,7 @@ gem 'turbolinks',              '5.0.0'
 gem 'jbuilder',                '2.4.1'
 gem 'omniauth-google-oauth2'
 gem 'rest-client'
+gem 'figaro'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
