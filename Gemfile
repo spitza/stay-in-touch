@@ -19,6 +19,7 @@ gem 'jbuilder',                '2.4.1'
 gem 'omniauth-google-oauth2'
 gem 'rest-client'
 gem 'figaro'
+gem 'google-api-client', '0.8.2', require: 'google/api_client'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
